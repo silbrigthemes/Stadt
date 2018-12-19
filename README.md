@@ -20,7 +20,8 @@ Screenshot of <a href="https://stadttheme.tumblr.com/" title="Preview Theme"><b>
         <li><a href="#Link" title="Link">Link</a></li>
         <li><a href="#Link-Hover" title="Link Hover">Link Hover</a></li>
         <li><a href="#Scrollbar-Background" title="Scrollbar Background">Scrollbar Background</a></li>
-        <li><a href="#Text" title="Text">Text</a></li>        
+        <li><a href="#Text" title="Text">Text</a></li>
+        <li><a href="#Pink-red-orange-yellow-green-blue-and-purple-text" title="Colored Text">Colored Text</a></li>        
       </ul>
       <li><a href="#Other" title="Other">Other</a></li>
       <ul>
