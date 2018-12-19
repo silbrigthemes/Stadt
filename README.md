@@ -10,6 +10,19 @@ A responsive, minimalist two-column flexbox theme.
 <ul>
   <li><a href="#Features" title="Features">Features</a></li>
   <li><a href="#Customization-Guide" title="Customization Guide">Customization Guide</a></li>
+    <ul>
+      <li><a href="#Colors" title="Colors">Colors</a></li>
+      <ul>
+        <li><a href="#Background" title="Background">Background</a></li>
+        <li><a href="#Bold-and-Italic" title="Bold and Italic">Bold and Italic</a></li>
+      </ul>
+      <li><a href="#Other" title="Other">Other</a></li>
+      <ul>
+        <li><a href="#Toggles" title="Toggles">Toggles</a></li>
+        <li><a href="#Custom-Links" title="Custom Links">Custom Links</a></li>
+      </ul>
+    </ul>    
+  <li><a href="#Credits" title="Credits">Credits</a></li>  
 </ul>  
   
 <h2>Features</h2>
@@ -145,4 +158,14 @@ A responsive, minimalist two-column flexbox theme.
 <li><strong>Custom URL N</strong>: This is where the URL of the link goes.</li>
 <li><strong>Custom Link N</strong>: This is where the title of the link goes. The title can be seen directly in the navigation and in the tooltip, when you hover over the link.</li>
 <li><strong>Custom Icon N</strong>: This is where you can set a custom icon for your custom link. If you need one, just head to <a href="http://honeybee.suiomi.com/" title="Honeybee | icon font by suiomi" target="_blank">suiomi&rsquo;s honeybee icon font</a>, search for the icon name and add it to that field.</li>
+</ul>
+
+<h2>Credits</h2>
+<ul>
+<li><a href="#mce_temp_url#">Icon font &ldquo;honeybee&rdquo;</a>, by <strong>suiomi</strong>.</li>
+<li><a href="https://yeolithm.com/post/172903772712/tutorial-removing-tumblr-app-button-on-mobile" title="Remove Tumblr App Button" target="_blank">Hidden tumblr app button</a>, by <strong>yeoli-thm</strong>.</li>
+<li><a href="http://roxiestheme.tumblr.com/post/158812662057/tutorial-change-the-color-of-tumblrs-new-audio" title="Custom Audio Background Script" target="_blank">Custom audio background script</a>, by <strong>roxiestheme</strong>.</li>
+<li><a href="http://acuite.tumblr.com/post/53152126640/tutorial-tooltips" title="Custom Tooltips Script" target="_blank">Custom tooltips script</a>, by <strong>acuite</strong>.</li>
+<li><a href="https://github.com/Spacetchi/tumblr-flexible-photoset/blob/master/README.md" title="Flexible Photosets" target="_blank">Flexible photosets</a>, by <strong>5ppi</strong>.</li>
+<li><a href="http://shythemes.tumblr.com/post/140444996328/tutorial-lightboxes" title="Custom Lightboxes" target="_blank">Custom lightboxes</a>, by <strong>shythemes</strong>.</li>
 </ul>
