@@ -2,9 +2,10 @@
 Theme #11, <b>Stadt</b>, by silbrigthemes.
 
 <h2>Description</h2>
-A responsive, minimalist two-column flexbox theme.
+<p>A responsive, minimalist two-column flexbox theme.</p>
 
 <img src="https://66.media.tumblr.com/1bf76c41e1cfc37a387daa9e0e25d55d/tumblr_pjtv5nkUyG1wsskx3o4_r1_1280.png" alt="Screenshot of Theme #11, Stadt, by silbrigthemes."/>
+Screenshot of <a href="https://stadttheme.tumblr.com/" title="Preview Theme"><b>Stadt</b> (Theme #11)</a> by silbrigthemes.
 
 <h2>Directory</h2>
 <ul>
@@ -15,6 +16,11 @@ A responsive, minimalist two-column flexbox theme.
       <ul>
         <li><a href="#Background" title="Background">Background</a></li>
         <li><a href="#Bold-and-Italic" title="Bold and Italic">Bold and Italic</a></li>
+        <li><a href="#Borders" title="Borders">Borders</a></li>
+        <li><a href="#Link" title="Link">Link</a></li>
+        <li><a href="#Link-Hover" title="Link Hover">Link Hover</a></li>
+        <li><a href="#Scrollbar-Background" title="Scrollbar Background">Scrollbar Background</a></li>
+        <li><a href="#Text" title="Text">Text</a></li>        
       </ul>
       <li><a href="#Other" title="Other">Other</a></li>
       <ul>
