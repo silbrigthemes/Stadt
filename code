@@ -15,15 +15,17 @@ Rules:
     3) Do not claim as your own.
     4) Do not edit beyond recognition.
     5) Do not alter or delete the credit.
-
+    
 Useful comments to this code have been made. There is  customization guide which can be accessed via esperantotheme.tumblr.com/customization-guide.
 
 If you need any help for a problem that is not listed in the customization guide or where you cannot find a solution, feel free to send me a message via silbrigthemes.tumblr.com/ask or send a message to my official support blog, silbrigsupport.tumblr.com.
 
+Last Update: 18th of February 2019
+
 -->
 
     <head>
-
+    
     <meta charset="utf-16">
     <title>{Title}</title>
     {block:Description}
@@ -36,7 +38,7 @@ If you need any help for a problem that is not listed in the customization guide
     <!-- Necessary for the theme to be responsive. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- "Honeybee" icon font, by @themehive. -->
+    <!-- "Honeybee" icon font, by @suiomi. -->
     <link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
 
     <!-- Necessary for the scripts to work. -->
@@ -72,12 +74,12 @@ If you need any help for a problem that is not listed in the customization guide
             });
         });
     </script>
-
+    
     <!-- Cormorant Garamond -->
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
     <!-- Dancing Script -->
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-
+    
     <!-- Title Fonts -->
     <!-- Playfair Display -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&amp;subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
@@ -94,41 +96,43 @@ If you need any help for a problem that is not listed in the customization guide
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700&amp;subset=latin-ext" rel="stylesheet">
     <!-- IBM Plex Mono -->
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
-
+    
     <meta name="if:Show Captions" content="0"/>
     <meta name="if:Grayscale Images" content="1"/>
-
+    
     <meta name="if:Show Link 1" content="0"/>
     <meta name="if:Show Link 2" content="0"/>
     <meta name="if:Show Link 3" content="0"/>
     <meta name="if:Show Link 4" content="0"/>
     <meta name="if:Show Link 5" content="0"/>
-
+    
     <meta name="if:Show Captions" content="0"/>
-
+    
     <meta name="text:Custom URL 1" content=""/>
     <meta name="text:Custom Link 1" content="Link 1"/>
     <meta name="text:Custom Icon 1" content="link-o"/>
-
+    
     <meta name="text:Custom URL 2" content=""/>
     <meta name="text:Custom Link 2" content="Link 2"/>
     <meta name="text:Custom Icon 2" content="link-o"/>
-
+    
     <meta name="text:Custom URL 3" content=""/>
     <meta name="text:Custom Link 3" content="Link 3"/>
     <meta name="text:Custom Icon 3" content="link-o"/>
-
+    
     <meta name="text:Custom URL 4" content=""/>
     <meta name="text:Custom Link 4" content="Link 4"/>
     <meta name="text:Custom Icon 4" content="link-o"/>
-
+    
     <meta name="text:Custom URL 5" content=""/>
     <meta name="text:Custom Link 5" content="Link 5"/>
     <meta name="text:Custom Icon 5" content="link-o"/>
-
+    
     <meta name="color:Background" content="#eae3d4"/>
     <meta name="color:Bold" content="#888"/>
     <meta name="color:Borders" content="#333"/>
+    <meta name="color:Info Text" content="#333"/>
+    <meta name="color:Info Text Hover" content="#333"/>
     <meta name="color:Italic" content="#444"/>
     <meta name="color:Link" content="#6e85b8"/>
     <meta name="color:Link Hover" content="#d4dbea"/>
@@ -141,21 +145,21 @@ If you need any help for a problem that is not listed in the customization guide
     <meta name="color:Green Text" content="#54b967"/>
     <meta name="color:Blue Text" content="#4b71c2"/>
     <meta name="color:Purple Text" content="#8838d5"/>
-
+    
     <meta name="select:Font" content="Roboto Mono" title="Roboto Mono"/>
     <meta name="select:Font" content="Source Sans Pro" title="Source Sans Pro"/>
     <meta name="select:Font" content="IBM Plex Mono" title="IBM Plex Mono"/>
-
+    
     <meta name="select:Font Size" content="1em" title="16px"/>
     <meta name="select:Font Size" content="14px" title="14px"/>
     <meta name="select:Font Size" content="12px" title="12px"/>
-
+    
     <meta name="select:Title Font" content="Playfair Display" title="Playfair Display"/>
     <meta name="select:Title Font" content="Lobster Two" title="Lobster Two"/>
     <meta name="select:Title Font" content="Averia Serif" title="Averia Serif"/>
-
+    
         <style>
-
+            
             body{
                 margin:0;
                 top:0;
@@ -171,45 +175,45 @@ If you need any help for a problem that is not listed in the customization guide
                 justify-content:space-evenly;
                 align-items:center;
             }
-
+            
             /* Custom Scrollbar */
             ::-webkit-scrollbar{
                 width:10px;
                 background-color:{color:Scrollbar Background};
                 border:4px solid {color:Background};
             }
-
+            
             ::-webkit-scrollbar-thumb{
                 width:10px;
                 background-color:{color:Text};
                 border:4px solid {color:Background};
             }
-
+            
             /* Custom Text Selection */
             ::selection{
                 background-color:{color:Link Hover};
                 color:{color:Borders};
                 text-shadow:none;
             }
-
+            
             ::-moz-selection{
                 background-color:{color:Link Hover};
                 color:{color:Borders};
                 text-shadow:none;
             }
-
+            
             ::-o-selection{
                 background-color:{color:Link Hover};
                 color:{color:Borders};
                 text-shadow:none;
             }
-
+            
             ::-webkit-selection{
                 background-color:{color:Link Hover};
                 color:{color:Borders};
                 text-shadow:none;
             }
-
+            
             /* Custom Tooltips */
             #s-m-t-tooltip{
                 max-width:300px;
@@ -222,36 +226,36 @@ If you need any help for a problem that is not listed in the customization guide
                 text-transform:uppercase;
                 font-weight:300;
             }
-
+            
             /* Bold Text */
             b, strong{
                 font-weight:700, bold;
                 color:{color:Bold};
             }
-
+            
             /* Italic Text */
             i, em{
                 font-style:italic;
                 font-weight:300;
                 color:{color:Italic};
             }
-
+            
             /* Underlined Text */
             u{
                 text-decoration:none;
                 border-bottom:2px solid {color:Text};
             }
-
+            
             /* Empty Paragraph */
             p:empty{
                 display:none;
             }
-
+            
             /* Small Text */
             small{
                 font-size:calc({select:Font Size} - 4px);
             }
-
+            
             /* Line Break */
             hr{
                 width:80%;
@@ -259,14 +263,14 @@ If you need any help for a problem that is not listed in the customization guide
                 background-color:{color:Text};
                 border:none;
             }
-
+            
             /* Blockquote */
             blockquote{
                 margin-left:1em;
                 border-left:2px solid {color:Text};
                 padding-left:0.5em;
             }
-
+            
             /* Preformatted Text */
             pre{
                 font-family:{select:Font}, Courier;
@@ -278,13 +282,13 @@ If you need any help for a problem that is not listed in the customization guide
                 word-wrap:break-all;
                 white-space:pre-wrap;
             }
-
+            
             /* Marked Text */
             mark{
                 background-color:{color:Link Hover};
                 padding:0 0.25em;
             }
-
+            
             /* Read More */
             p.read_more_container{
                 border-right:2px solid {color:Text};
@@ -294,12 +298,12 @@ If you need any help for a problem that is not listed in the customization guide
                 text-align:center;
                 padding:0 0.25em;
             }
-
+            
             a.read_more{
                 border-bottom:none;
                 box-shadow:none;
             }
-
+            
             /* Embedded GIFs */
             p.tmblr-attribution{
                 border-left:2px solid {color:Borders};
@@ -308,7 +312,7 @@ If you need any help for a problem that is not listed in the customization guide
                 padding:0 0.25em;
                 text-align:center;
             }
-
+            
             p.tmblr-attribution a{
                 border-bottom:none;
                 box-shadow:inset 0 {color:Link Hover};
@@ -319,7 +323,7 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             p.tmblr-attribution a:hover{
                 box-shadow:inset 0 -16px {color:Link Hover};
                 transition:0.5s;
@@ -327,7 +331,7 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /* Links */
             a{
                 color:{color:Link};
@@ -339,7 +343,7 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             a:hover{
                 box-shadow:inset 0 -8px {color:Link Hover};
                 transition:0.5s;
@@ -347,7 +351,7 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /** HEADINGS **/
             /* Post Title */
             .title{
@@ -356,21 +360,21 @@ If you need any help for a problem that is not listed in the customization guide
                 font-family:{select:Title Font}, Georgia;
                 text-align:center;
             }
-
+            
             /* First Heading */
             h1{
                 font-size:calc(1.75 * {select:Font Size});
                 font-family:{select:Font}, Courier;
                 font-weight:700, bold;
             }
-
+            
             /* Second Heading */
             h2{
                 font-size:calc(1.5 * {select:Font Size});
                 font-family:{select:Font}, Courier;
                 font-weight:300;
             }
-
+            
             /** COLORED TEXT **/
             /* Red Text */
             .npf_color_joey {
@@ -424,14 +428,14 @@ If you need any help for a problem that is not listed in the customization guide
                 font-family:"Cormorant Garamond", "Palatino";
                 font-size:calc(1.5 * {select:Font Size});
             }
-
+            
             /*** BLOG INFORMATION ***/
             /** CONTAINER **/
             #information{
                 width:calc(40vw - 2em);
                 padding:1em;
             }
-
+            
             /** TITLE **/
             #info-title{
                 font-size:calc(2.5 * {select:Font Size});
@@ -440,13 +444,13 @@ If you need any help for a problem that is not listed in the customization guide
                 border-bottom:4px solid {color:Borders};
                 margin-bottom:8px;
             }
-
+            
             /** DESCRIPTION **/
             #info-desc{
                 text-align:justify;
                 font-style:italic;
             }
-
+            
             /** NAVIGATION **/
             /* Navigation Container */
             #info-nav{
@@ -456,7 +460,7 @@ If you need any help for a problem that is not listed in the customization guide
                 justify-content:space-between;
                 flex-wrap:wrap;
             }
-
+            
             /* Navigation Element */
             .navi{
                 width:15vw;
@@ -470,7 +474,7 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /* Navigation Element on Hover */
             .navi:hover{
                 box-shadow:inset 0 -10px {color:Link Hover};
@@ -479,25 +483,25 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /* Navigation Links */
             a.navlink{
                 border-bottom:none;
                 box-shadow:none;
             }
-
+            
             #info-searchbar{
                 border-bottom:2px solid {color:Borders};
                 padding-bottom:4px;
                 margin-top:8px;
             }
-
+            
             .sfm input {
-                background-color: {color:Background};
-                font-size: calc({select:Font Size} - 2px);
-                border: 2px solid {color:Borders};
-                text-transform: uppercase;
-                color: {color:Borders};
+                background-color: {color:Background}; 
+                font-size: calc({select:Font Size} - 2px); 
+                border: 2px solid {color:Borders}; 
+                text-transform: uppercase; 
+                color: {color:Borders}; 
                 padding: 4px 8px;
                 font-family: {select:Font}, Courier;
                 width:calc(100% - (2em - 2px));
@@ -507,7 +511,7 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             .sfm input:hover{
                 color:{color:Text};
                 border:2px solid {color:Text};
@@ -516,7 +520,7 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /*** POSTS ***/
             article{
                 width:calc(40vw - 2em);
@@ -524,7 +528,7 @@ If you need any help for a problem that is not listed in the customization guide
                 margin-top:2em;
                 margin-bottom:2em;
             }
-
+            
             /** IMAGES **/
             article img{
                 max-width:100%;
@@ -539,7 +543,7 @@ If you need any help for a problem that is not listed in the customization guide
                 -webkit-transition:0.5s;
                 {/block:IfGrayscaleImages}
             }
-
+            
             {block:IfGrayscaleImages}
             article img:hover{
                 filter: grayscale(0%);
@@ -552,77 +556,77 @@ If you need any help for a problem that is not listed in the customization guide
                 -webkit-transition:0.5s;
             }
             {/block:IfGrayscaleImages}
-
+            
             /** PHOTOSETS **/
             .photo-row {
                 padding:0.2em 0;
                 display:flex;
             }
-
+             
             .photo-row:first-child {
             	padding-top:0;
             }
-
+            
             .photo-row:last-child {
             	padding-bottom:0;
             }
-
+            
             .image-container {
                 cursor:pointer;
                 padding:0 0.2em;
             }
-
+            
             .image-container:first-child {
                 padding-left:0;
             }
-
+            
             .image-container:last-child {
                 padding-right:0;
             }
-
+            
             .image {
                 width:100%;
                 height:100%;
             	display:block;
                 object-fit:cover;
             }
-
+            
             .photo-row-1 .image-container {
                 width:100%;
             }
-
+            
             .photo-row-2 .image-container {
                 width:50%;
             }
-
+            
             .photo-row-3 .image-container {
                 width:33.3333333%;
             }
-
+            
             /** QUOTE POSTS **/
             .quoted{
                 font-size:calc(1.5 * {select:Font Size});
                 font-style:italic;
                 font-family:{select:Title Font}, Georgia;
             }
-
+            
             .quote-source{
                 margin-top:8px;
                 text-align:right;
             }
-
+            
             /** AUDIO POSTS **/
             .audio > iframe{
                 width:100%;
                 max-width:100%;
             }
-
+            
             /** VIDEO POSTS **/
             .video > iframe{
                 width:100%;
                 max-width:100%;
             }
-
+            
             /** QUESTIONS **/
             /* ANSWER */
             .answer{
@@ -671,7 +675,7 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
            }
-
+           
            .answer-username a:hover{
                color:{color:Borders};
            }
@@ -724,7 +728,7 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
            }
-
+           
            /** CHAT **/
             /* Containers */
             .chatterbox{
@@ -790,7 +794,7 @@ If you need any help for a problem that is not listed in the customization guide
                 border-bottom:2px solid {color:Borders};
                 color:{color:Borders};
             }
-
+            
            /** LINK POSTS **/
             .link-posts{
                 width:100%;
@@ -830,8 +834,8 @@ If you need any help for a problem that is not listed in the customization guide
             .link-posts a img{
                 width:100%;
                 max-width:100%;
-            }
-
+            } 
+           
            /*** USER SPECIFICATIONS ***/
            /** USERNAME **/
             .username{
@@ -884,7 +888,7 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /*** PERMALINK PAGE ***/
             /* User Avatar */
             img.avatar{
@@ -911,7 +915,7 @@ If you need any help for a problem that is not listed in the customization guide
 
             /* Liked by … */
             li.like:before{
-                content:"\e155";
+                content:"\ea55";
                 font-family:"honeybee";
                 font-weight:400;
                 position:relative;
@@ -922,7 +926,7 @@ If you need any help for a problem that is not listed in the customization guide
 
             /* Reblogged by … */
             li.reblog:before{
-                content:"\e3f1";
+                content:"\ebc2";
                 font-family:"honeybee";
                 font-weight:400;
                 position:relative;
@@ -933,7 +937,7 @@ If you need any help for a problem that is not listed in the customization guide
 
             /* User Replied to … */
             li.reply:before{
-                content:"\e418";
+                content:"\ebce";
                 font-family:"honeybee";
                 font-weight:400;
                 position:relative;
@@ -972,14 +976,14 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /*** POST FOOTER ***/
             .post-footer{
                 margin-top:8px;
                 border-top:2px solid {color:Text};
                 padding-top:8px;
             }
-
+            
             .post-footer .clear{
                 clear:both;
             }
@@ -998,12 +1002,12 @@ If you need any help for a problem that is not listed in the customization guide
             .info .clear{
                 clear:both;
             }
-
+            
             a.specs{
                 border-bottom:none;
                 box-shadow:none;
             }
-
+            
             /** TIMESTAMP **/
             /* Timestamp Mark */
             .time mark{
@@ -1014,21 +1018,23 @@ If you need any help for a problem that is not listed in the customization guide
                 margin-right:8px;
                 background-color:{color:Background};
                 box-shadow:inset -4px -4px {color:Link Hover};
+                color:{color:Info Text};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /* Timestamp Mark Hover */
             .time mark:hover{
                 box-shadow:inset -16px -20px {color:Link Hover};
+                color:{color:Info Text Hover};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /** NOTECOUNT **/
             /* Notecount Mark */
             .notecount mark{
@@ -1039,21 +1045,23 @@ If you need any help for a problem that is not listed in the customization guide
                 margin-right:8px;
                 background-color:{color:Background};
                 box-shadow:inset -4px -4px {color:Link Hover};
+                color:{color:Info Text};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /* Notecount Mark Hover */
             .notecount mark:hover{
                 box-shadow:inset -16px -20px {color:Link Hover};
+                color:{color:Info Text Hover};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /** VIA **/
             /* Via Mark */
             .via mark{
@@ -1064,21 +1072,23 @@ If you need any help for a problem that is not listed in the customization guide
                 margin-right:8px;
                 background-color:{color:Background};
                 box-shadow:inset -4px -4px {color:Link Hover};
+                color:{color:Info Text};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /* Via Mark Hover */
             .via mark:hover{
                 box-shadow:inset -16px -20px {color:Link Hover};
+                color:{color:Info Text Hover};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /** SOURCE **/
             /* Source Mark */
             .source mark{
@@ -1089,21 +1099,23 @@ If you need any help for a problem that is not listed in the customization guide
                 margin-right:8px;
                 background-color:{color:Background};
                 box-shadow:inset -4px -4px {color:Link Hover};
+                color:{color:Info Text};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /* Source Mark Hover */
             .source mark:hover{
                 box-shadow:inset -16px -20px {color:Link Hover};
+                color:{color:Info Text Hover};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /** REBLOGGED */
             /* Reblog Mark */
             .reblogged mark{
@@ -1114,21 +1126,23 @@ If you need any help for a problem that is not listed in the customization guide
                 margin-right:8px;
                 background-color:{color:Background};
                 box-shadow:inset -4px -4px {color:Link Hover};
+                color:{color:Info Text};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /* Reblog Mark Hover */
             .reblogged mark:hover{
                 box-shadow:inset -16px -20px {color:Link Hover};
+                color:{color:Info Text Hover};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /** LIKE BUTTON **/
             /* Like Button */
             .like_button {
@@ -1152,7 +1166,7 @@ If you need any help for a problem that is not listed in the customization guide
 
             /* Like Button Before Element */
             .like_button::before{
-                content:"\e155";
+                content:"\ea55";
                 font-family:"honeybee";
                 font-weight:300;
                 position:relative;
@@ -1182,6 +1196,7 @@ If you need any help for a problem that is not listed in the customization guide
                 margin-right:8px;
                 background-color:{color:Background};
                 box-shadow:inset -4px -4px {color:Link Hover};
+                color:{color:Info Text};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
@@ -1191,12 +1206,13 @@ If you need any help for a problem that is not listed in the customization guide
             /* Like Mark on Hover */
             a.liked mark:hover{
                 box-shadow:inset -16px -20px {color:Link Hover};
+                color:{color:Info Text Hover};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /** TAGS **/
             /* Tag Container */
             .tag-c{
@@ -1208,7 +1224,7 @@ If you need any help for a problem that is not listed in the customization guide
                 width:100%;
                 height:auto;
             }
-
+            
             /* Tags Mark */
             .tags mark{
                 padding:0 0.25em;
@@ -1218,21 +1234,23 @@ If you need any help for a problem that is not listed in the customization guide
                 margin-right:8px;
                 background-color:{color:Background};
                 box-shadow:inset -4px -4px {color:Link Hover};
+                color:{color:Info Text};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /* Tags Mark Hover */
             .tags mark:hover{
                 box-shadow:inset -16px -20px {color:Link Hover};
+                color:{color:Info Text Hover};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /*** PAGINATION ***/
             /* Container */
             #f-pagination{
@@ -1243,14 +1261,14 @@ If you need any help for a problem that is not listed in the customization guide
                 justify-content:space-evenly;
                 margin-bottom:2em;
             }
-
+                
             /* Pagination Links */
             a.f-pagi-link{
                 text-decoration:none;
                 border-bottom:none;
                 box-shadow:none;
             }
-
+                
             .f-box{
                 width:36px;
                 height:36px;
@@ -1266,7 +1284,7 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+                
             .f-box:hover{
                 background-color:{color:Link Hover};
                 transition:0.5s;
@@ -1274,14 +1292,14 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /*** MORE ***/
             /* Hides the tumblr app button, by @yeoli-thm */
             .tmblr-iframe--app-cta-button {
                 display: none!important;
             }
-
-
+            
+            
             /** CUSTOM TUMBLR CONTROLS **/
             /* Hides standard tumblr controls */
             body > iframe:first-child {
@@ -1348,14 +1366,14 @@ If you need any help for a problem that is not listed in the customization guide
             a.tumblr-box{
                 border-bottom:none;
             }
-
+            
             /** CREDIT **/
             /* Do NOT delete the credit! */
             a.credlink{
                 border-bottom:none;
                 box-shadow:none;
             }
-
+            
             .credit{
                 position:fixed;
                 bottom:0.5em;
@@ -1375,7 +1393,7 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             .credit:hover{
                 background-color:{color:Link Hover};
                 transition:0.5s;
@@ -1383,32 +1401,32 @@ If you need any help for a problem that is not listed in the customization guide
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
             }
-
+            
             /** RESPONSIVE LAYOUT **/
             @media only screen and (max-width:800px){
                 #information{
                     width:calc(80vw - 2em);
                 }
-
+                
                 article{
                     width:calc(80vw - 2em);
                 }
-
+                
                 #f-pagination{
                     width:calc(80vw - 2em);
                 }
             }
-
+            
         </style>
     </head>
-
+    
     <body>
-
+        
         <!-- CUSTOM TUMBLR CONTROLS -->
         <div id="big-box">
             <a href="https://www.tumblr.com/dashboard" title="go to dashboard" class="boxlink">
                 <div class="box">
-                    <span class="th th-house-2-o"></span>
+                    <span class="th th-tumblr-o"></span>
                 </div>
             </a>
 
@@ -1420,23 +1438,23 @@ If you need any help for a problem that is not listed in the customization guide
 
             <a href="https://www.tumblr.com/customize/{Name}?redirect_to=https%3A%2F%2F{Name}.tumblr.com" title="customize theme" class="boxlink">
                 <div class="box">
-                    <span class="th th-pencil-1-o"></span>
+                    <span class="th th-pencil-o"></span>
                 </div>
             </a>
 
             <a href="https://www.tumblr.com/settings/blog/{Name}" title="change settings" class="boxlink">
                 <div class="box">
-                    <span class="th th-settings-5-o"></span>
+                    <span class="th th-settings-o"></span>
                 </div>
             </a>
 
             <a href="https://www.tumblr.com/follow/{Name}" title="follow {Name}" class="boxlink">
                 <div class="box">
-                    <span class="th th-plus-2-o"></span>
+                    <span class="th th-plus-1-o"></span>
                 </div>
             </a>
         </div>
-
+        
         <!-- BLOG INFORMATION -->
         <div id="information">
             <!-- Blog Title -->
@@ -1454,10 +1472,10 @@ If you need any help for a problem that is not listed in the customization guide
                 <!-- Index Link -->
                 <a href="/" title="index" class="navlink">
                     <div class="navi">
-                        <span class="th th-house-2-o"></span> Index
+                        <span class="th th-home-o"></span> Index
                     </div>
                 </a>
-
+                
                 <!-- Ask Link -->
                 {block:AskEnabled}
                 <a href="/ask" title="{AskLabel}" class="navlink">
@@ -1466,16 +1484,15 @@ If you need any help for a problem that is not listed in the customization guide
                     </div>
                 </a>
                 {/block:AskEnabled}
-
-                <!-- Submit Link -->
-                {block:SubmissionsEnabled}
-                <a href="/submit" title="{SubmitLabel}" class="navlink">
+                
+                <!-- Archive -->
+                <a href="/archive" title="browse archive" class="navlink">
                     <div class="navi">
-                        <span class="th th-send-1-o"></span> {SubmitLabel}
+                        <span class="th th-box-2-o"></span> Archive
                     </div>
                 </a>
-                {/block:SubmissionsEnabled}
-
+                {/block:SubmissionsEnabled} 
+                
                 <!-- First Custom Link -->
                 {block:IfShowLink1}
                 <a href="{text:Custom URL 1}" title="{text:Custom Link 1}" class="navlink">
@@ -1484,7 +1501,7 @@ If you need any help for a problem that is not listed in the customization guide
                     </div>
                 </a>
                 {/block:IfShowLink1}
-
+                
                 <!-- Second Custom Link -->
                 {block:IfShowLink2}
                 <a href="{text:Custom URL 2}" title="{text:Custom Link 2}" class="navlink">
@@ -1493,7 +1510,7 @@ If you need any help for a problem that is not listed in the customization guide
                     </div>
                 </a>
                 {/block:IfShowLink2}
-
+                
                 <!-- Third Custom Link -->
                 {block:IfShowLink3}
                 <a href="{text:Custom URL 3}" title="{text:Custom Link 3}" class="navlink">
@@ -1502,7 +1519,7 @@ If you need any help for a problem that is not listed in the customization guide
                     </div>
                 </a>
                 {/block:IfShowLink3}
-
+                
                 <!-- Fourth Custom Link -->
                 {block:IfShowLink4}
                 <a href="{text:Custom URL 4}" title="{text:Custom Link 4}" class="navlink">
@@ -1511,7 +1528,7 @@ If you need any help for a problem that is not listed in the customization guide
                     </div>
                 </a>
                 {/block:IfShowLink4}
-
+                
                 <!-- Fifth Custom Link -->
                 {block:IfShowLink5}
                 <a href="{text:Custom URL 5}" title="{text:Custom Link 5}" class="navlink">
@@ -1522,7 +1539,7 @@ If you need any help for a problem that is not listed in the customization guide
                 {/block:IfShowLink5}
             </div>
         </div>
-
+        
         <!-- POSTS -->
         {block:Posts}
         <article>
@@ -1570,7 +1587,7 @@ If you need any help for a problem that is not listed in the customization guide
             <div class="question">
             <div class="question-username">
                 <img src="{AskerPortraitURL-96}" alt="user icon">
-                <mark>{Asker}</mark>
+                <mark>{Asker}</mark> 
             </div>
             {Question}
             </div>
@@ -1788,10 +1805,10 @@ If you need any help for a problem that is not listed in the customization guide
             {block:Photoset}
             <div class="photoset" data-layout="{PhotosetLayout}">
             {block:Photos}
-            <div class="image-container"
-            data-width="{PhotoWidth-HighRes}"
-            data-height="{PhotoHeight-HighRes}"
-            data-lowres="{PhotoURL-500}"
+            <div class="image-container" 
+            data-width="{PhotoWidth-HighRes}" 
+            data-height="{PhotoHeight-HighRes}" 
+            data-lowres="{PhotoURL-500}" 
             data-highres="{PhotoURL-HighRes}">
             <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" class="image"/>
             </div>
@@ -1873,7 +1890,7 @@ If you need any help for a problem that is not listed in the customization guide
             {/block:Caption}
             {/block:Audio}
 
-
+                
             <!-- VIDEO POSTS -->
             {block:Video}
             <div class="video">
@@ -1938,7 +1955,7 @@ If you need any help for a problem that is not listed in the customization guide
             {block:RebloggedFrom}
             <div class="via">
                 <a class="specs" href="{ReblogParentURL}" title="via">
-                    <mark><span class="th th-right-arrow-curved" aria-hidden="true"></span> via</mark>
+                    <mark><span class="th th-paper-plane-o" aria-hidden="true"></span> via</mark>
                 </a>
             </div>
             {/block:RebloggedFrom}
@@ -1947,7 +1964,7 @@ If you need any help for a problem that is not listed in the customization guide
             {block:ContentSource}
             <div class="source">
                 <a class="specs" href="{SourceURL}" title="source">
-                    <mark><span class="th th-placeholder-4-o" aria-hidden="true"></span> source</mark>
+                    <mark><span class="th th-creative-commons" aria-hidden="true"></span> source</mark>
                 </a>
             </div>
             {/block:ContentSource}
@@ -1955,7 +1972,7 @@ If you need any help for a problem that is not listed in the customization guide
             <!-- REBLOG BUTTON -->
             <div class="reblogged">
                 <a class="specs" href="{ReblogURL}" title="reblog this post">
-                    <mark><span class="th th-reload-arrow" aria-hidden="true"></span> reblog</mark>
+                    <mark><span class="th th-reblog" aria-hidden="true"></span> reblog</mark>
                 </a>
             </div>
 
@@ -1972,7 +1989,7 @@ If you need any help for a problem that is not listed in the customization guide
             {block:Tags}
             <a class="specs" href="{TagURL}" title="tagged as: {Tag}">
                 <mark>
-                    <span class="th th-tag-o" aria-hidden="true"></span> {Tag}
+                    # {Tag}
                 </mark>
             </a>
             {/block:Tags}
@@ -1989,7 +2006,7 @@ If you need any help for a problem that is not listed in the customization guide
             {/block:PermalinkPage}
         </article>
         {/block:Posts}
-
+                  
         <!-- PAGINATION -->
         <div id="f-pagination">
             {block:Pagination}
@@ -2001,7 +2018,7 @@ If you need any help for a problem that is not listed in the customization guide
                     </div>
                 </a>
                 {/block:PreviousPage}
-
+                    
                 <!-- Jump Pagination -->
                 {block:JumpPagination length="3"}
                 {block:CurrentPage}
@@ -2015,7 +2032,7 @@ If you need any help for a problem that is not listed in the customization guide
                 </a>
                 {/block:JumpPage}
                 {/block:JumpPagination}
-
+                    
                 <!-- Next Page -->
                 {block:NextPage}
                 <a class="f-pagi-link" href="{NextPage}" title="next">
@@ -2025,8 +2042,8 @@ If you need any help for a problem that is not listed in the customization guide
                 </a>
                 {/block:NextPage}
             {/block:Pagination}
-        </div>
-
+        </div>   
+        
         <!-- CREDIT -->
         <!-- Do NOT delete the credit! -->
         <a href="https://silbrigthemes.tumblr.com" title="theme by silbrigthemes" class="credlink">
@@ -2034,10 +2051,10 @@ If you need any help for a problem that is not listed in the customization guide
                 <span class="th th-blossom-o"></span>
             </div>
         </a>
-
+            
         <!-- SCRIPTS -->
         <script>
-
+        
         window.addEventListener('load', startup, false);
 
         function startup() {
@@ -2047,11 +2064,11 @@ If you need any help for a problem that is not listed in the customization guide
                 makePhotoset(photosets[i]);
             }
         }
-
+            
         function makeLightboxes(photoset) {
         	// get image containers in photoset
         	let image_containers = photoset.getElementsByClassName("image-container");
-
+        
         	// loop over image containers
         	for (let i = 0, n = image_containers.length; i < n; i++) {
         		// add click event to image container
@@ -2059,18 +2076,18 @@ If you need any help for a problem that is not listed in the customization guide
         			// current is the image's index in the photoset
         			// due to tumblr reasons, it starts at 1
         			let current = i + 1;
-
+        
         			// activate lightbox
         			lightbox(image_containers, current);
         		});
         	}
         }
-
+        
         function lightbox(image_containers, current) {
         	// array of lightboxes for each image in photoset
         	// lightbox is represented by an object
         	let lightboxes = [];
-
+        
         	// loop over image containers
         	for (let i = 0, n = image_containers.length; i < n; i++) {
         		// create object for image container
@@ -2081,45 +2098,45 @@ If you need any help for a problem that is not listed in the customization guide
         			"low_res" : image_container.dataset.lowres,
         			"high_res" : image_container.dataset.highres,
         		}
-
+        
         		// add object to array
         		lightboxes.push(arrayContents);
         	}
-
+        
         	// activate built-in tumblr function
         	Tumblr.Lightbox.init(lightboxes, current);
         }
-
+        
         function makePhotoset(photoset) {
         	// get image containers in photoset
         	let images = photoset.getElementsByClassName("image-container");
-
+        
         	// get layout of photoset -- formatted as string of numbers of images per row
         	// e.g "231" means row of 2 images, row of 3 images, row of 1 image
         	let layout = photoset.dataset.layout;
-
+        
         	// loop over each row
         	for (let i = 0, n = layout.length; i < n; i++) {
         		// get number of images in row
         		let cols = layout.charAt(i);
-
+        
         		// create row
         		// row is a div with classes "photo-row" and "photo-row-n"
         		let row = document.createElement("div");
         		row.classList.add("photo-row-" + cols);
         		row.classList.add("photo-row");
-
+        
         		// loop over number of images in row
         		// move the right amount of images to row
         		for (let j = 0; j < cols; j++) {
         			row.appendChild(images[0]);
         		}
-
+        
         		// add row to the photoset
         		photoset.appendChild(row);
         	}
         }
-        </script>
-
+        </script>       
+        
     </body>
 </html>
