@@ -75,6 +75,16 @@ Last Update: 18th of February 2019
         });
     </script>
     
+    <!-- CSS Photosets, by annasthms and espoirthemes -->
+    <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
+    <link href="https://static.tumblr.com/0podkko/xIbplezmo/modified_photosets.css" rel="stylesheet">
+    <script src="https://static.tumblr.com/0podkko/jfMplm3f8/modified_photosets.js"></script>
+    <script>initPhotosets();</script>
+    
+    <!-- Masonry Libraries -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    
     <!-- Cormorant Garamond -->
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
     <!-- Dancing Script -->
@@ -83,22 +93,26 @@ Last Update: 18th of February 2019
     <!-- Title Fonts -->
     <!-- Playfair Display -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&amp;subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
-    <!-- Lobster Two -->
-    <link href="https://fonts.googleapis.com/css?family=Lobster+Two:400,700" rel="stylesheet">
-    <!-- Averia Serif -->
-    <link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,400,700" rel="stylesheet">
-
+    <!-- Merriweather -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+    <!-- Roboto Slab -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 
     <!-- Body Fonts -->
     <!-- Roboto Mono -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
     <!-- Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+    <!-- Open Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
     <!-- IBM Plex Mono -->
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
     
     <meta name="if:Show Captions" content="0"/>
     <meta name="if:Grayscale Images" content="1"/>
+    <meta name="if:Masonry" content="0"/>
     
     <meta name="if:Show Link 1" content="0"/>
     <meta name="if:Show Link 2" content="0"/>
@@ -147,7 +161,9 @@ Last Update: 18th of February 2019
     <meta name="color:Purple Text" content="#8838d5"/>
     
     <meta name="select:Font" content="Roboto Mono" title="Roboto Mono"/>
+    <meta name="select:Font" content="Roboto" title="Roboto"/>
     <meta name="select:Font" content="Source Sans Pro" title="Source Sans Pro"/>
+    <meta name="select:Font" content="Open Sans" title="Open Sans"/>
     <meta name="select:Font" content="IBM Plex Mono" title="IBM Plex Mono"/>
     
     <meta name="select:Font Size" content="1em" title="16px"/>
@@ -155,8 +171,8 @@ Last Update: 18th of February 2019
     <meta name="select:Font Size" content="12px" title="12px"/>
     
     <meta name="select:Title Font" content="Playfair Display" title="Playfair Display"/>
-    <meta name="select:Title Font" content="Lobster Two" title="Lobster Two"/>
-    <meta name="select:Title Font" content="Averia Serif" title="Averia Serif"/>
+    <meta name="select:Title Font" content="Merriweather" title="Merriweather"/>
+    <meta name="select:Title Font" content="Roboto Slab" title="Roboto Slab"/>
     
         <style>
             
@@ -170,10 +186,12 @@ Last Update: 18th of February 2019
                 color:{color:Text};
                 text-align:justify;
                 overflow-x:hidden;
+                {block:IfNotMasonry}
                 display:flex;
                 flex-wrap:wrap;
                 justify-content:space-evenly;
                 align-items:center;
+                {/block:IfNotMasonry}
             }
             
             /* Custom Scrollbar */
@@ -527,6 +545,9 @@ Last Update: 18th of February 2019
                 padding:1em;
                 margin-top:2em;
                 margin-bottom:2em;
+                {block:IfMasonry}
+                margin-left:calc(5vw + 2em);
+                {/block:IfMasonry}
             }
             
             /** IMAGES **/
@@ -537,70 +558,40 @@ Last Update: 18th of February 2019
                 -moz-filter:grayscale(100%);
                 -o-filter:grayscale(100%);
                 -webkit-filter:grayscale(100%);
+                {/block:IfGrayscaleImages}
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
-                {/block:IfGrayscaleImages}
             }
             
-            {block:IfGrayscaleImages}
             article img:hover{
+                transition:0.5s;
+                -moz-transition:0.5s;
+                -o-transition:0.5s;
+                -webkit-transition:0.5s;
+                {block:IfGrayscaleImages}
                 filter: grayscale(0%);
                 -moz-filter:grayscale(0%);
                 -o-filter:grayscale(0%);
                 -webkit-filter:grayscale(0%);
+                {/block:IfGrayscaleImages}
+            }
+            
+            /** PHOTOSETS **/
+            /* Photoset Grid */
+            .photoset-grid{
+                grid-gap:16px;
+            }
+            
+            .photo img:hover, [photoset-layout] img:hover{
+                cursor:pointer;
+                transform:scale(0.95);
+                box-shadow:0 0 4px {color:Scrollbar Background};
                 transition:0.5s;
                 -moz-transition:0.5s;
                 -o-transition:0.5s;
                 -webkit-transition:0.5s;
-            }
-            {/block:IfGrayscaleImages}
-            
-            /** PHOTOSETS **/
-            .photo-row {
-                padding:0.2em 0;
-                display:flex;
-            }
-             
-            .photo-row:first-child {
-            	padding-top:0;
-            }
-            
-            .photo-row:last-child {
-            	padding-bottom:0;
-            }
-            
-            .image-container {
-                cursor:pointer;
-                padding:0 0.2em;
-            }
-            
-            .image-container:first-child {
-                padding-left:0;
-            }
-            
-            .image-container:last-child {
-                padding-right:0;
-            }
-            
-            .image {
-                width:100%;
-                height:100%;
-            	display:block;
-                object-fit:cover;
-            }
-            
-            .photo-row-1 .image-container {
-                width:100%;
-            }
-            
-            .photo-row-2 .image-container {
-                width:50%;
-            }
-            
-            .photo-row-3 .image-container {
-                width:33.3333333%;
             }
             
             /** QUOTE POSTS **/
@@ -1357,6 +1348,7 @@ Last Update: 18th of February 2019
                 box-shadow:none!important;
                 border-radius:0!important;
                 max-width:none;
+                box-shadow:0 0 8px {color:Scrollbar Background}!important;
             }
 
             .tmblr-lightbox, #tumblr_lightbox {
@@ -1410,6 +1402,9 @@ Last Update: 18th of February 2019
                 
                 article{
                     width:calc(80vw - 2em);
+                    {block:IfMasonry}
+                    margin-left:10vw;
+                    {/block:IfMasonry}
                 }
                 
                 #f-pagination{
@@ -1456,7 +1451,7 @@ Last Update: 18th of February 2019
         </div>
         
         <!-- BLOG INFORMATION -->
-        <div id="information">
+        <article id="information">
             <!-- Blog Title -->
             <div id="info-title">{Title}</div>
             <!-- Blog Description -->
@@ -1538,7 +1533,7 @@ Last Update: 18th of February 2019
                 </a>
                 {/block:IfShowLink5}
             </div>
-        </div>
+        </article>
         
         <!-- POSTS -->
         {block:Posts}
@@ -1713,7 +1708,7 @@ Last Update: 18th of February 2019
             <!-- PHOTO POSTS -->
             {block:Photo}
             {LinkOpenTag}
-            <a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
+            <a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false" title="click to open lightbox">
                 <div class="photo">
                     <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
                 </div>
@@ -1751,13 +1746,14 @@ Last Update: 18th of February 2019
                 {/block:RebloggedFrom}
             {/block:IfShowCaptions}
             {/block:Caption}
-            {/block:Photo}
+            {/block:Photo} <!-- / end photos -->
 
+            <!-- /*/*/*/ -->
 
             <!-- PANORAMA POSTS -->
             {block:Panorama}
             {LinkOpenTag}
-            <a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
+            <a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false" title="click to open lightbox">
                 <div class="panorama">
                     <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">
                 </div>
@@ -1797,23 +1793,19 @@ Last Update: 18th of February 2019
                 {/block:RebloggedFrom}
             {/block:IfShowCaptions}
             {/block:Caption}
-            {/block:Panorama}
+            {/block:Panorama} <!-- / end panorama -->
 
-
+            <!-- /*/*/*/ -->
 
             <!-- PHOTOSETS -->
             {block:Photoset}
-            <div class="photoset" data-layout="{PhotosetLayout}">
+            <div class="photoset-grid" photoset-layout="{PhotosetLayout}">
             {block:Photos}
-            <div class="image-container" 
-            data-width="{PhotoWidth-HighRes}" 
-            data-height="{PhotoHeight-HighRes}" 
-            data-lowres="{PhotoURL-500}" 
-            data-highres="{PhotoURL-HighRes}">
-            <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" class="image"/>
+            <div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)" title="click to open lightbox">
+            <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
             </div>
             {/block:Photos}
-            </div><!-- photoset -->
+            </div>
             {block:Caption}
             {block:IfShowCaptions}
             {block:NotReblog}
@@ -1847,8 +1839,7 @@ Last Update: 18th of February 2019
                 {/block:RebloggedFrom}
             {block:IfShowCaptions}
             {/block:Caption}
-            {/block:Photoset}
-
+            {/block:Photoset} <!-- / end photosets -->
 
             <!-- AUDIO POSTS -->
             {block:Audio}
@@ -2008,13 +1999,13 @@ Last Update: 18th of February 2019
         {/block:Posts}
                   
         <!-- PAGINATION -->
-        <div id="f-pagination">
+        <article id="f-pagination">
             {block:Pagination}
                 <!-- Previous Page -->
                 {block:PreviousPage}
                 <a class="f-pagi-link" href="{PreviousPage}" title="previous">
                     <div class="f-box">
-                        <span class="th th-backward-arrow"></span>
+                        <span class="th th-chevron-left"></span>
                     </div>
                 </a>
                 {/block:PreviousPage}
@@ -2037,12 +2028,12 @@ Last Update: 18th of February 2019
                 {block:NextPage}
                 <a class="f-pagi-link" href="{NextPage}" title="next">
                     <div class="f-box">
-                        <span class="th th-skip-track"></span>
+                        <span class="th th-chevron-right"></span>
                     </div>
                 </a>
                 {/block:NextPage}
             {/block:Pagination}
-        </div>   
+        </article>   
         
         <!-- CREDIT -->
         <!-- Do NOT delete the credit! -->
@@ -2053,90 +2044,47 @@ Last Update: 18th of February 2019
         </a>
             
         <!-- SCRIPTS -->
+        <!-- CSS PHOTOSETS SCRIPT -->
+        <!-- by annasthms and espoirthemes -->
         <script>
-        
-        window.addEventListener('load', startup, false);
-
-        function startup() {
-            let photosets = document.getElementsByClassName("photoset");
-            for (let i = 0, n = photosets.length; i < n; i++) {
-                makeLightboxes(photosets[i]);
-                makePhotoset(photosets[i]);
-            }
+        function gatherData(images, arr) {
+          for (let i = 0; i < images.length; i++) {
+            let currentData = {
+              "width": images[i].getAttribute('data-width'),
+              "height": images[i].getAttribute('data-height'),
+              "low_res": images[i].getAttribute('data-lowres'),
+              "high_res": images[i].getAttribute('data-highres')
+            };
+            arr.push(currentData);
+          }
         }
-            
-        function makeLightboxes(photoset) {
-        	// get image containers in photoset
-        	let image_containers = photoset.getElementsByClassName("image-container");
-        
-        	// loop over image containers
-        	for (let i = 0, n = image_containers.length; i < n; i++) {
-        		// add click event to image container
-        		image_containers[i].addEventListener("click", function() {
-        			// current is the image's index in the photoset
-        			// due to tumblr reasons, it starts at 1
-        			let current = i + 1;
-        
-        			// activate lightbox
-        			lightbox(image_containers, current);
-        		});
-        	}
+        function getIndex(elem) {
+          let i = 0;
+          while( (elem = elem.previousElementSibling) != null ) i++;
+          return i;
         }
-        
-        function lightbox(image_containers, current) {
-        	// array of lightboxes for each image in photoset
-        	// lightbox is represented by an object
-        	let lightboxes = [];
-        
-        	// loop over image containers
-        	for (let i = 0, n = image_containers.length; i < n; i++) {
-        		// create object for image container
-        		let image_container = image_containers[i]
-        		let arrayContents = {
-        			"width" : image_container.dataset.width,
-        			"height" : image_container.dataset.height,
-        			"low_res" : image_container.dataset.lowres,
-        			"high_res" : image_container.dataset.highres,
-        		}
-        
-        		// add object to array
-        		lightboxes.push(arrayContents);
-        	}
-        
-        	// activate built-in tumblr function
-        	Tumblr.Lightbox.init(lightboxes, current);
+        function lightbox(elem) {
+          let currentPhotoset = elem.parentNode;
+          let photosetPhotos = currentPhotoset.getElementsByTagName('div');
+          let data = [];
+          gatherData(photosetPhotos, data);
+          Tumblr.Lightbox.init(data, getIndex(elem) + 1);
         }
+        </script>
         
-        function makePhotoset(photoset) {
-        	// get image containers in photoset
-        	let images = photoset.getElementsByClassName("image-container");
-        
-        	// get layout of photoset -- formatted as string of numbers of images per row
-        	// e.g "231" means row of 2 images, row of 3 images, row of 1 image
-        	let layout = photoset.dataset.layout;
-        
-        	// loop over each row
-        	for (let i = 0, n = layout.length; i < n; i++) {
-        		// get number of images in row
-        		let cols = layout.charAt(i);
-        
-        		// create row
-        		// row is a div with classes "photo-row" and "photo-row-n"
-        		let row = document.createElement("div");
-        		row.classList.add("photo-row-" + cols);
-        		row.classList.add("photo-row");
-        
-        		// loop over number of images in row
-        		// move the right amount of images to row
-        		for (let j = 0; j < cols; j++) {
-        			row.appendChild(images[0]);
-        		}
-        
-        		// add row to the photoset
-        		photoset.appendChild(row);
-        	}
-        }
-        </script>       
+        {block:IfMasonry}
+        <!-- Masonry Script, by DeSandro -->
+        <script type="text/javascript" charset="utf-8">$(document).ready(function(){
+        var $grid = $("body").masonry({
+             itemSelector: "article",
+             initLayout: 1
+            });
+            $grid.imagesLoaded().progress(function() {
+             $grid.masonry("layout")
+            });
+            });
+        </script>
+        {/block:IfMasonry}
         
     </body>
 </html>
